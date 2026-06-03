@@ -13,6 +13,8 @@ jobs:
         with:
           java-version: '8'
           distribution: 'temurin'
+      - name: Fix gradlew permissions
+        run: chmod +x gradlew
       - name: Build
         run: ./gradlew build
       - name: Upload JAR
